@@ -1,8 +1,8 @@
 var Web3 = require('web3')
 const config = require('./config')
 
-const { eth: { protocol, host, port } } = config
-const nodeUrl = `${protocol}://${host}:${port}`
+const { eth: { domain } } = config
+const nodeUrl = `${domain}`
 
 var web3 = new Web3(new Web3.providers.HttpProvider(nodeUrl))
 // if (typeof web3 !== 'undefined') {
